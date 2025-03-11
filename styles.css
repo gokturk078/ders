@@ -112,15 +112,12 @@ footer {
 
     /* Mobil için iframe ayarları */
     .iframe-container {
-        position: fixed;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
         height: 100vh; /* Ekran yüksekliğinin tamamını kapla */
         margin: 0;
         padding: 0;
         overflow: hidden;
-        z-index: 1000; /* Diğer içeriklerin üzerinde olmasını sağla */
     }
 
     iframe {

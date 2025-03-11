@@ -1,21 +1,19 @@
 // iframe.js dosyası
 document.addEventListener("DOMContentLoaded", function () {
-    const iframeContainer = document.querySelector(".iframe-container");
     const iframe = document.querySelector("iframe");
 
     function resizeIframe() {
         if (window.innerWidth <= 768) {
-            // Mobil cihazlarda iframe'in tam ekran olmasını sağla
+            // Mobil cihazlarda iframe'in içeriğini ölçeklendir
             iframe.style.width = "100%";
             iframe.style.height = "100vh";
-            iframe.style.borderRadius = "0";
-            iframe.style.boxShadow = "none";
+            iframe.style.transform = "scale(1)";
+            iframe.style.transformOrigin = "top left";
         } else {
             // Bilgisayarlarda iframe'in normal boyutlarda olmasını sağla
             iframe.style.width = "100%";
             iframe.style.height = "80vh";
-            iframe.style.borderRadius = "8px";
-            iframe.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+            iframe.style.transform = "none";
         }
     }
 
