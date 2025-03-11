@@ -1,0 +1,182 @@
+/* Genel Stil */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bolumler, .kitaplar {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bolumler h2, .kitaplar h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6200ea;
+    font-weight: 600;
+}
+
+.bolumler ul, .kitaplar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bolumler li, .kitaplar li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bolumler li:hover, .kitaplar li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bolumler a, .kitaplar a {
+    text-decoration: none;
+    color: #6200ea;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .bolumler, .kitaplar {
+        padding: 0 10px;
+    }
+
+    .bolumler li, .kitaplar li {
+        padding: 10px;
+    }
+
+    .bolumler h2, .kitaplar h2 {
+        font-size: 1.5rem;
+    }
+
+    .bolumler a, .kitaplar a {
+        font-size: 1rem;
+    }
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh; /* Ekran yüksekliğinin %80'i */
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    margin: 5px 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6200ea;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #6200ea;
+    color: white;
+}
+
+/* Ekstra Stil İyileştirmeleri */
+.bolumler a:hover, .kitaplar a:hover {
+    color: #3700b3;
+}
+
+footer a {
+    color: #6200ea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
