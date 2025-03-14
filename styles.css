@@ -1,16 +1,24 @@
-/* Genel Stil */
+/* styles.css dosyası */
+:root {
+    --leopard-primary: #FF8C42; /* Turuncu tonu */
+    --leopard-secondary: #D95D39; /* Koyu turuncu */
+    --leopard-dark: #2E2E2E; /* Siyah tonu */
+    --leopard-light: #F4F4F9; /* Açık gri */
+    --leopard-accent: #FFD166; /* Sarı tonu */
+}
+
 body, html {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--leopard-dark);
+    color: var(--leopard-light);
     line-height: 1.6;
 }
 
 header {
-    background-color: #6200ea;
-    color: white;
+    background-color: var(--leopard-primary);
+    color: var(--leopard-dark);
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -42,7 +50,7 @@ main {
 .bolumler h2, .kitaplar h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #6200ea;
+    color: var(--leopard-accent);
     font-weight: 600;
 }
 
@@ -52,7 +60,7 @@ main {
 }
 
 .bolumler li, .kitaplar li {
-    background-color: white;
+    background-color: var(--leopard-secondary);
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 8px;
@@ -67,7 +75,7 @@ main {
 
 .bolumler a, .kitaplar a {
     text-decoration: none;
-    color: #6200ea;
+    color: var(--leopard-accent);
     font-size: 1.1rem;
     font-weight: 500;
     display: block;
@@ -76,59 +84,40 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: var(--leopard-dark);
+    color: var(--leopard-light);
     position: fixed;
     width: 100%;
     bottom: 0;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Tasarım */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
 
-    header p {
-        font-size: 1rem;
-    }
+body {
+    background: radial-gradient(circle, var(--leopard-primary) 10%, transparent 10%), 
+                radial-gradient(circle, var(--leopard-primary) 10%, transparent 10%), 
+                var(--leopard-dark);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+}
 
-    .bolumler, .kitaplar {
-        padding: 0 10px;
-    }
+nav a {
+    text-decoration: none;
+    color: var(--leopard-accent);
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    background-color: var(--leopard-secondary);
+}
 
-    .bolumler li, .kitaplar li {
-        padding: 10px;
-    }
+nav a:hover {
+    background-color: var(--leopard-primary);
+    color: var(--leopard-dark);
+}
 
-    .bolumler h2, .kitaplar h2 {
-        font-size: 1.5rem;
-    }
-
-    .bolumler a, .kitaplar a {
-        font-size: 1rem;
-    }
-
-    /* Mobil için iframe ayarları */
-    .iframe-container {
-        position: relative;
-        width: 100%;
-        height: 100vh; /* Ekran yüksekliğinin tamamını kapla */
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 0; /* Köşe yuvarlaklığını kaldır */
-        box-shadow: none; /* Gölgeyi kaldır */
-        transform: scale(1); /* İçeriği tam olarak sığdır */
-        transform-origin: top left;
-    }
+.bolumler a:hover, .kitaplar a:hover {
+    color: var(--leopard-primary);
 }
 
 .iframe-container {
@@ -136,8 +125,11 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80vh; /* Ekran yüksekliğinin %80'i */
+    height: 80vh;
     margin: 20px 0;
+    background-color: var(--leopard-secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 iframe {
@@ -149,54 +141,12 @@ iframe {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav li {
-    margin: 5px 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #6200ea;
-    font-size: 1rem;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-nav a:hover {
-    background-color: #6200ea;
-    color: white;
-}
-
-/* Ekstra Stil İyileştirmeleri */
-.bolumler a:hover, .kitaplar a:hover {
-    color: #3700b3;
-}
-
-footer a {
-    color: #6200ea;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-footer a:hover {
-    text-decoration: underline;
+header h1 {
+    font-family: 'Bebas Neue', cursive;
 }
